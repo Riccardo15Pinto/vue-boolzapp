@@ -16,6 +16,16 @@ body{
 .row{
     width: 1500px;
     height: 800px;
-    background-color: aliceblue;
 }
 
+footer,
+header{
+    height: 100px;
+    background-color: #009688;
+}
+
+main{
+    height: calc(100% - 200px);
+    background-image: url("../img/mine.jpg");
+    overflow: auto;
+}
