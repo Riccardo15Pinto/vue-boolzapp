@@ -29,3 +29,8 @@ main{
     background-image: url("../img/mine.jpg");
     overflow: auto;
 }
+
+.bi-paperclip{
+    rotate: 40deg;
+    padding-bottom: 10px;
+}
