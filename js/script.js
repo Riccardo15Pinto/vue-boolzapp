@@ -6,6 +6,7 @@ console.log('ok vue', Vue);
 const app = Vue.createApp({
     data(){
         return{
+            currentID: 1,//questo deve aggiornarsi al click su un utente, ma di base (al cariacamento della pagina è uno)
             data : {
                 user: {
                   name: 'Nome Utente',
@@ -207,8 +208,19 @@ const app = Vue.createApp({
         }
     },
 
+
+    computed: {
+        //qui ci va una computed property che restituisce (return) SOLO i messaggi dell'utente che ha come id === currentID
+        messages(){
+            //...
+        }
+    },
+    
     methods:{
-        
+        updatecurrentId(targetId){
+            this.currentID = targetId;
+        }
+        //qui ci va un metodo che dato un utente (o direttamente un id) aggiorna il currentID
     }
 });
 
