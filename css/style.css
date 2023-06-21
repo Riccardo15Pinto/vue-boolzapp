@@ -13,8 +13,8 @@ body{
     height: 100vh;
 }
 
-main{
-    width: 1200px;
+.row{
+    width: 1500px;
     height: 800px;
     background-color: aliceblue;
 }
