@@ -35,9 +35,9 @@
                             <!-- user -->
                             <div class="col-8 h-100 d-flex justify-content-start align-items-center">
                                <!-- user img -->
-                                <img src="img/avatar_io.jpg" alt="" class="rounded-circle pe-2">
+                                <img :src="'img/avatar' + data.user.avatar + '.jpg'" alt="" class="rounded-circle pe-2">
                                 <!-- user name -->
-                                <h3>Nome Utente</h3>
+                                <h3>{{data.user.name}}</h3>
 
                             </div>
                             <!-- icons -->
@@ -85,11 +85,11 @@
                 <section id="contact">
                     <!-- contact profile -->
                     <ul class="ps-0">
-                        <li class="d-flex p-3">
+                        <li class="d-flex p-3" v-for="contact in data.contacts">
                             <!-- contact img -->
-                            <img src="img/avatar_1.jpg" alt="" class="rounded-circle pe-2">
+                            <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="" class="rounded-circle pe-2">
                             <!-- contact name -->
-                            <h5 class="ms-3">Roberto</h5>
+                            <h5 class="ms-3">{{contact.name}}</h5>
                         </li>
                     </ul>
                 </section>
