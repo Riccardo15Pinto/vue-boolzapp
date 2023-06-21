@@ -21,7 +21,14 @@ body{
 footer,
 header{
     height: 100px;
-    background-color: #009688;
+}
+
+header{
+    background-color: #EAEAEA;
+}
+
+footer{
+    background-color: #F3EEEA;
 }
 
 main{
@@ -33,4 +40,8 @@ main{
 .bi-paperclip{
     rotate: 40deg;
     padding-bottom: 10px;
+}
+
+header img{
+    width: 70px;
 }
