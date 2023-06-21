@@ -12,3 +12,10 @@ body{
     background: linear-gradient( #009688 10%, #DADBD3 10%);
     height: 100vh;
 }
+
+main{
+    width: 1200px;
+    height: 800px;
+    background-color: aliceblue;
+}
+
