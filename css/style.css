@@ -79,7 +79,7 @@ footer{
 .sent{
     padding: 10px;
     background-color: #D5F9BA;
-    max-width: 300px;
+    width: 400px;
     word-wrap: break-word;
     position: relative;
     left: 65%;
@@ -89,7 +89,7 @@ footer{
 .received{
     background-color: #fff;
     padding: 10px;
-    width: 300px;
+    width: 400px;
     word-wrap: break-word;
     margin-bottom: 10px;
 }
