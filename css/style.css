@@ -15,7 +15,7 @@ body{
 
 /*main-content*/
 
-/*header is used also in sidebar element*/
+/* 'header' is used also in sidebar element*/
 
 header{
     background-color: #EAEAEA;
@@ -45,6 +45,12 @@ footer{
 #wrapper{
     width: 1500px;
     height: 800px;
+}
+
+/*sidebar */
+#notify{
+    height: 100px;
+    background-color: #8EDAFC;
 }
 
 /*icons*/
