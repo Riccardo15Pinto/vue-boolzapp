@@ -82,8 +82,8 @@ footer{
     width: 400px;
     word-wrap: break-word;
     position: relative;
-    left: 65%;
-    margin-bottom: 10px;
+    left: 50%;
+    margin-bottom: 25px;
 }
 
 .received{
@@ -91,7 +91,7 @@ footer{
     padding: 10px;
     width: 400px;
     word-wrap: break-word;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 /*icons main content header*/
