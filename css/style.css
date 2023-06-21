@@ -13,22 +13,21 @@ body{
     height: 100vh;
 }
 
-#wrapper{
-    width: 1500px;
-    height: 800px;
-}
+/*main-content*/
 
-footer,
-header{
-    height: 100px;
-}
+/*header is used also in sidebar element*/
 
 header{
     background-color: #EAEAEA;
 }
 
-footer{
-    background-color: #F3EEEA;
+header img{
+    width: 70px;
+}
+
+footer,
+header{
+    height: 100px;
 }
 
 main{
@@ -37,14 +36,25 @@ main{
     overflow: auto;
 }
 
+footer{
+    background-color: #F3EEEA;
+}
+
+/*wrapper*/
+
+#wrapper{
+    width: 1500px;
+    height: 800px;
+}
+
+/*icons*/
+
 .bi-paperclip{
     rotate: 40deg;
     padding-bottom: 10px;
 }
 
-header img{
-    width: 70px;
-}
+/*scrollbar*/
 
 ::-webkit-scrollbar{
     width: 5px;
