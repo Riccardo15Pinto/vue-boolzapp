@@ -6,7 +6,7 @@ console.log('ok vue', Vue);
 const app = Vue.createApp({
     data(){
         return{
-            const data = {
+            data : {
                 user: {
                   name: 'Nome Utente',
                   avatar: '_io'
