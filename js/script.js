@@ -202,11 +202,14 @@ const app = Vue.createApp({
                       }
                     ],
                   }
-                ]
-              
+                ] 
             },
         }
     },
+
+    methods:{
+        
+    }
 });
 
 //print in DOM
