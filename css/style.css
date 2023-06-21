@@ -11,18 +11,18 @@
 body{
     background: linear-gradient( #009688 10%, #DADBD3 10%);
     height: 100vh;
+    font-family: sans-serif;
 }
 
+img{
+    width: 70px;
+}
 /*main-content*/
 
 /* 'header' is used also in sidebar element*/
 
 header{
     background-color: #EAEAEA;
-}
-
-header img{
-    width: 70px;
 }
 
 footer,
@@ -40,15 +40,16 @@ footer{
     background-color: #F3EEEA;
 }
 
-/*wrapper*/
-#wrapper{
-    width: 1500px;
-}
-
 /*root*/
 
 #root{
     height: 800px;
+}
+
+/*wrapper*/
+
+#wrapper{
+    width: 1500px;
 }
 
 /*sidebar */
@@ -73,9 +74,27 @@ footer{
     overflow: auto;
 }
 
+/*main content messagge*/
 
-/*icons*/
+.sent{
+    padding: 10px;
+    background-color: #D5F9BA;
+    max-width: 300px;
+    word-wrap: break-word;
+    position: relative;
+    left: 65%;
+    margin-bottom: 10px;
+}
 
+.received{
+    background-color: #fff;
+    padding: 10px;
+    width: 300px;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+}
+
+/*icons main content header*/
 .bi-paperclip{
     rotate: 40deg;
     padding-bottom: 10px;
