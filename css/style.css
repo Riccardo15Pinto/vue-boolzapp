@@ -13,7 +13,7 @@ body{
     height: 100vh;
 }
 
-.row{
+#wrapper{
     width: 1500px;
     height: 800px;
 }
