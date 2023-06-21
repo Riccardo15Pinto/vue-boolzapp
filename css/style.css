@@ -41,9 +41,13 @@ footer{
 }
 
 /*wrapper*/
-
 #wrapper{
     width: 1500px;
+}
+
+/*root*/
+
+#root{
     height: 800px;
 }
 
@@ -54,9 +58,19 @@ footer{
     background-color: #8EDAFC;
 }
 
+#filter{
+    height: 75px;
+    background-color: lightgray;
+}
+
 .bell{
     width: 60px;
     height: 60px;
+}
+
+#contact{
+    height: calc(100% - 275px);
+    overflow: auto;
 }
 
 
