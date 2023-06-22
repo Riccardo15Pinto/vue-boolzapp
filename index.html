@@ -146,10 +146,10 @@
                     <!-- ITERO SOLO SUI MESSAGGI DELL'UENTE CORRENTE-->
                     <ul>
                         <li v-for="(message, i) in currentChat[0].messages" class="w-100" >
-                            <div :class="message.status" class="show">
+                            <div :class="message.status" class="show" >
                                 <h6 class="mb-0">{{message.message}}</h6>
                                 <p class="mb-0 text-end">{{message.date}}</p>
-                                <div class="message">
+                                <div id="message" >
                                     <p>info messaggio</p>
                                     <p @click="deleteMessagge(i)">Elimina messaggio</p>
                                 </div>
