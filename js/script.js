@@ -6,8 +6,9 @@ console.log('ok vue', Vue);
 const app = Vue.createApp({
     data(){
         return{
+            newDate:'',
             userMessage : '',
-            newsentMessagge:'',
+            newreceivedMessagge:'ok',
             currentID: 1,//questo deve aggiornarsi al click su un utente, ma di base (al cariacamento della pagina è uno)
             data : {
                 user: {
@@ -212,7 +213,6 @@ const app = Vue.createApp({
 
 
     computed: {
-      //qui ci va una computed property che restituisce (return) SOLO i messaggi dell'utente che ha come id === currentID
       currentChat(){
         return this.data.contacts.filter( message => message.id === this.currentID);
       },
@@ -225,7 +225,21 @@ const app = Vue.createApp({
       },
 
 
-        //qui ci va un metodo che dato un utente (o direttamente un id) aggiorna il currentID
+      addNewReceived(){
+        
+        this.currentChat[0].messages.push({id: new Date().getTime(), date: 'oggi', message: this.newreceivedMessagge, status: 'received'})
+
+      },
+
+      addNewChat(){
+        if(this.userMessage.length > 0){
+          this.currentChat[0].messages.push({id: new Date().getTime(), date: 'oggi', message: this.userMessage, status: 'sent'})
+        }
+
+        this.userMessage = '';
+
+        setTimeout(this.addNewReceived, 3000);
+      }
     }
 });
 
