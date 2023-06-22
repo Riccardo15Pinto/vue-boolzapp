@@ -40,6 +40,11 @@ main li{
     list-style: none;
 }
 
+main p{
+    font-size: 10px;
+    margin-top: 10px;
+}
+
 footer{
     background-color: #F3EEEA;
 }
@@ -78,6 +83,16 @@ footer{
     overflow: auto;
 }
 
+#contact p{
+    text-overflow: ellipsis;
+    width: 0;
+    white-space: nowrap;
+}
+
+#contact h6{
+    font-size: 13px;
+}
+
 /*main content messagge*/
 
 .sent{
@@ -88,6 +103,7 @@ footer{
     border-radius: 30px;
     position: relative;
     left: 60%;
+    margin-bottom: 20px;
 }
 
 .received{
@@ -96,6 +112,7 @@ footer{
     width: 40%;
     word-wrap: break-word;
     border-radius: 30px;
+    margin-bottom: 20px;
 }
 
 .f-end{
