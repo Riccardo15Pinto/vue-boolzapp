@@ -115,11 +115,8 @@ footer{
     margin-bottom: 20px;
 }
 
-.f-end{
-    justify-content: flex-end;
-}
-
 /*icons main content header*/
+
 .bi-paperclip{
     rotate: 40deg;
     padding-bottom: 10px;
@@ -139,3 +136,28 @@ footer{
     background: gray;
     border-radius: 5px;
 }
+
+/*utility*/
+
+.show{
+
+    position: relative;
+}
+
+.message{
+    background-color: lightgrey;
+    position: absolute;
+    top: 45px;
+    right: 120px;
+    border-radius: 30px;
+    display: none;
+    padding: 10px;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.show:hover .message{
+    display: block;
+}
+
+
