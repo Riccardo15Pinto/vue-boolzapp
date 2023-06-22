@@ -36,6 +36,10 @@ main{
     overflow: auto;
 }
 
+main li{
+    list-style: none;
+}
+
 footer{
     background-color: #F3EEEA;
 }
@@ -77,23 +81,25 @@ footer{
 /*main content messagge*/
 
 .sent{
-    padding: 10px;
+    padding: 10px 20px;
     background-color: #D5F9BA;
-    width: 400px;
+    width: 40%;
     word-wrap: break-word;
-    position: relative;
-    left: 40%;
-    margin-bottom: 25px;
     border-radius: 30px;
+    position: relative;
+    left: 60%;
 }
 
 .received{
     background-color: #fff;
-    padding: 10px;
-    width: 400px;
+    padding: 10px 20px;
+    width: 40%;
     word-wrap: break-word;
-    margin-bottom: 25px;
     border-radius: 30px;
+}
+
+.f-end{
+    justify-content: flex-end;
 }
 
 /*icons main content header*/
