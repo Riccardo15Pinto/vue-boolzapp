@@ -107,11 +107,11 @@
 
                             <div class="col h-100 d-flex justify-content-start align-items-center">
                                 <!-- contact user img -->
-                                <img :src="" alt="" class="rounded-circle pe-2">
+                                <img :src="'img/avatar' + currentChat[0].avatar + '.jpg'" alt="" class="rounded-circle pe-2">
                                <!-- contact user info -->
                                 <div>
                                    <!-- name -->
-                                    <h3></h3>
+                                    <h3>{{currentChat[0].name}}</h3>
                                     <!-- Last Access -->
                                     <h6>Ultimo accesso oggi alle..</h6>
                                
@@ -137,7 +137,7 @@
                 <!-- messagge area -->
                 <main class="p-4">
                     <!-- ITERO SOLO SUI MESSAGGI DELL'UENTE CORRENTE-->
-                    <div v-for="message in messages" :class="message.status">
+                    <div v-for="message in currentChat[0].messages" :class="message.status">
                         <p class="mb-0">{{message.message}}</p>
                     </div>
                 </main>
