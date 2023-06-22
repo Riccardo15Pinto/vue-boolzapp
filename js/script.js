@@ -210,10 +210,11 @@ const app = Vue.createApp({
 
 
     computed: {
-        //qui ci va una computed property che restituisce (return) SOLO i messaggi dell'utente che ha come id === currentID
-        messages(){
-            //...
-        }
+      //qui ci va una computed property che restituisce (return) SOLO i messaggi dell'utente che ha come id === currentID
+      currentChat(){
+        return this.data.contacts.filter( message => message.id === this.currentID);
+      },
+
     },
     
     methods:{
