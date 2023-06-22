@@ -218,6 +218,7 @@ const app = Vue.createApp({
   },
   
   computed: {
+
     
     // track currentChat 
     currentChat(){
@@ -233,6 +234,10 @@ const app = Vue.createApp({
   },
   
   methods:{
+
+    deleteMessagge(index){
+      this.currentChat[0].messages.splice(index, 1);
+    },
 
     //track corrent id
     updatecurrentId(targetId){
