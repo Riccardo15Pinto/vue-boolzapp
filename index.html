@@ -85,11 +85,19 @@
                 <section id="contact">
                     <!-- contact profile -->
                     <ul class="ps-0">
-                        <li class="d-flex p-3" v-for="(contact, i) in findrequestContact" :id="contact.id" @click="updatecurrentId(contact.id)">
-                            <!-- contact img -->
-                            <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="" class="rounded-circle pe-2">
-                            <!-- contact name -->
-                            <h5 class="ms-3">{{contact.name}}</h5>
+                        <li class="d-flex justify-content-between " v-for="(contact, i) in findrequestContact" :id="contact.id" @click="updatecurrentId(contact.id)">
+                            <div class="d-flex">
+                                <!-- contact img -->
+                                <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="" class="rounded-circle pe-2">
+                                <!-- contact name -->
+                                <div>
+                                    <h5 class="">{{contact.name}}</h5>
+                                    <p class="">{{contact.messages[0].message}}</p>
+                                </div>
+                            </div>
+
+                            <h6>{{contact.messages[0].date}}</h6>
+
                         </li>
                     </ul>
                 </section>
@@ -112,7 +120,7 @@
                                    <!-- name -->
                                     <h3>{{currentChat[0].name}}</h3>
                                     <!-- Last Access -->
-                                    <h6>Ultimo accesso oggi alle..</h6>
+                                    <h6 class="fs-6">Ultimo accesso oggi alle {{currentChat[0].messages[0].date}}</h6>
                                
                                 </div>
 
@@ -138,8 +146,9 @@
                     <!-- ITERO SOLO SUI MESSAGGI DELL'UENTE CORRENTE-->
                     <ul>
                         <li v-for="message in currentChat[0].messages" class="w-100 " >
-                            <div >
-                                <p :class="message.status">{{message.message}}</p>
+                            <div :class="message.status">
+                                <h6 class="mb-0">{{message.message}}</h6>
+                                <p class="mb-0 text-end">{{message.date}}</p>
                             </div>
                         </li>
                     </ul>
