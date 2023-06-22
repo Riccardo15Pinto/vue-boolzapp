@@ -218,11 +218,13 @@ const app = Vue.createApp({
   },
   
   computed: {
+    
     // track currentChat 
     currentChat(){
       return this.data.contacts.filter( message => message.id === this.currentID);
     },
 
+    // filter contact 
     findrequestContact(){
       const term = this.findcontact.toLowerCase();
       return this.data.contacts.filter( contact => contact.name.toLowerCase().includes(term));
@@ -231,24 +233,31 @@ const app = Vue.createApp({
   },
   
   methods:{
+
     //track corrent id
     updatecurrentId(targetId){
       this.currentID = targetId;
     },
+
     //push in currentChat new contacts Messagge
     addNewReceived(){
-      
-      this.currentChat[0].messages.push({id: new Date().getTime(), date: 'oggi', message: this.newreceivedMessagge, status: 'received'})
-
+      this.currentChat[0].messages.push({id: new Date().getTime(), date: this.getTime(), message: this.newreceivedMessagge, status: 'received'})
     },
+
+    // get current time and day
+    getTime(){
+      const  today = new Date();
+      const  date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+      const  time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      return dateTime = date+' '+time;
+    },
+
     //push in current chat new user messagge and clear input and after 3sec claim add New Received
     addNewChat(){
       if(this.userMessage.length > 0){
-        this.currentChat[0].messages.push({id: new Date().getTime(), date: 'oggi', message: this.userMessage, status: 'sent'})
+        this.currentChat[0].messages.push({id: new Date().getTime(), date: this.getTime() , message: this.userMessage, status: 'sent'})
       }
-
       this.userMessage = '';
-
       setTimeout(this.addNewReceived, 3000);
     }
   }
