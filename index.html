@@ -136,9 +136,13 @@
                 <!-- messagge area -->
                 <main class="p-4">
                     <!-- ITERO SOLO SUI MESSAGGI DELL'UENTE CORRENTE-->
-                    <div v-for="message in currentChat[0].messages" :class="message.status">
-                        <p class="mb-0">{{message.message}}</p>
-                    </div>
+                    <ul>
+                        <li v-for="message in currentChat[0].messages" class="w-100 " >
+                            <div >
+                                <p :class="message.status">{{message.message}}</p>
+                            </div>
+                        </li>
+                    </ul>
                 </main>
                 <!-- footer -->
                 <footer>
@@ -155,10 +159,11 @@
 
                                     <label for="Text-area-user" class="form-label"></label>
 
-                                    <input type="text" class="form-control" id="Text-area-user" placeholder="Scrivi un messaggio...">
+                                    <input type="text" class="form-control" id="Text-area-user" placeholder="Scrivi un messaggio..." @keyup.enter="addNewChat" v-model.trim="userMessage">
                                 </div>
                                 <!-- icons -->
-                                <i class="bi bi-mic-fill fs-3 me-3"></i>
+                                <i v-if="userMessage.length === 0" class="bi bi-mic-fill fs-3 me-3"></i>
+                                <i v-if="userMessage.length > 0" class="bi bi-send-fill fs-3 me-3" @click="addNewChat"></i>
 
                             </div>
 
