@@ -140,23 +140,22 @@ footer{
 /*utility*/
 
 .show{
-
     position: relative;
 }
 
-.message{
+#message{
     background-color: lightgrey;
     position: absolute;
     top: 45px;
     right: 120px;
     border-radius: 30px;
-    display: none;
     padding: 10px;
     font-weight: 600;
     z-index: 1;
+    display: none;
 }
 
-.show:hover .message{
+.show:hover #message{
     display: block;
 }
 
