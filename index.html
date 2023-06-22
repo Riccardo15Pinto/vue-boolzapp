@@ -76,16 +76,16 @@
                 <!-- input filter contact -->
                 <!-- input-group -->
                 <div id="filter" class="input-group p-2">
-                    <span class="input-group-text bg-white border-end-0" id="basic-addon1">
+                    <span class="input-group-text bg-white border-end-0">
                         <i class="bi bi-search fs-3 ps-3"></i>
                     </span>
-                    <input type="text" class="form-control border-start-0" placeholder="Cerca o Inizia una nuova chat" >
+                    <input type="text" class="form-control border-start-0" placeholder="Cerca o Inizia una nuova chat" v-model.trim="findcontact"  >
                 </div>
                 <!-- contacts -->
                 <section id="contact">
                     <!-- contact profile -->
                     <ul class="ps-0">
-                        <li class="d-flex p-3" v-for="(contact, i) in data.contacts" :id="contact.id" @click="updatecurrentId(contact.id)">
+                        <li class="d-flex p-3" v-for="(contact, i) in findrequestContact" :id="contact.id" @click="updatecurrentId(contact.id)">
                             <!-- contact img -->
                             <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="" class="rounded-circle pe-2">
                             <!-- contact name -->
