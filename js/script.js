@@ -7,6 +7,7 @@ const app = Vue.createApp({
   
   data(){
     return{
+      
       //check filter
       findcontact: '',
       //new user messagge
@@ -219,7 +220,6 @@ const app = Vue.createApp({
   
   computed: {
 
-    
     // track currentChat 
     currentChat(){
       return this.data.contacts.filter( message => message.id === this.currentID);
@@ -227,7 +227,9 @@ const app = Vue.createApp({
 
     // filter contact 
     findrequestContact(){
+
       const term = this.findcontact.toLowerCase();
+      
       return this.data.contacts.filter( contact => contact.name.toLowerCase().includes(term));
     }
 
@@ -264,8 +266,9 @@ const app = Vue.createApp({
       }
       this.userMessage = '';
       setTimeout(this.addNewReceived, 3000);
-    }
+    },
   }
+  
 
 });
 
