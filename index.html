@@ -85,18 +85,18 @@
                 <section id="contact">
                     <!-- contact profile -->
                     <ul class="ps-0">
-                        <li class="d-flex justify-content-between " v-for="(contact, i) in filterContacts" :id="contact.id" @click="getcurrentId(contact.id)">
+                        <li class="d-flex justify-content-between p-3" v-for="(contact, i) in filterContacts" :id="contact.id" @click="getcurrentId(contact.id)">
                             <div class="d-flex">
                                 <!-- contact img -->
                                 <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="" class="rounded-circle pe-2">
                                 <!-- contact name -->
                                 <div>
                                     <h5>{{contact.name}}</h5>
-                                    <p>{{currentLastreceivedMessage[0].message}}</p>
+                                    <p>{{contact.messages[contact.messages.length - 1].message}}</p>
                                 </div>
                             </div>
 
-                            <h6>{{currentLastreceivedMessage[0].date}}</h6>
+                            <h6>{{contact.messages[contact.messages.length - 1].date}}</h6>
 
                         </li>
                     </ul>
