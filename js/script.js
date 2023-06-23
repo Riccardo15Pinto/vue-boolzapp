@@ -241,8 +241,11 @@ const app = Vue.createApp({
       return this.contacts.filter( contact => contact.name.toLowerCase().includes(term));
     },
     
+    //last received message
     currentLastreceivedMessage(){
-      return this.currentChat[0].messages.filter(element => element.status === this.status );
+      return this.currentChat[0].messages.filter(
+        (message) => message.status === 'received'
+      ).slice(-1);
       
     },
   },
