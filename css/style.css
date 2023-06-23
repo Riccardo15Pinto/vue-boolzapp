@@ -84,7 +84,7 @@ footer{
 }
 
 #contact p{
-    text-overflow: ellipsis;
+    text-overflow: ellipsis ellipsis;
     width: 0;
     white-space: nowrap;
 }
@@ -115,6 +115,21 @@ footer{
     margin-bottom: 20px;
 }
 
+.show{
+    position: relative;
+}
+
+#message{
+    background-color: lightgrey;
+    position: absolute;
+    top: 45px;
+    right: 120px;
+    border-radius: 30px;
+    padding: 10px;
+    font-weight: 600;
+    z-index: 1;
+}
+
 /*icons main content header*/
 
 .bi-paperclip{
@@ -139,24 +154,7 @@ footer{
 
 /*utility*/
 
-.show{
-    position: relative;
-}
 
-#message{
-    background-color: lightgrey;
-    position: absolute;
-    top: 45px;
-    right: 120px;
-    border-radius: 30px;
-    padding: 10px;
-    font-weight: 600;
-    z-index: 1;
-    display: none;
-}
 
-.show:hover #message{
-    display: block;
-}
 
 
